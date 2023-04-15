@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>reMake feed</title>
+  <link href="feed.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/efca1a24b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 id="remakelink">reMake</h1>
+    <div class="userpfp">
+      <img id="profilepicture" src="" style="border-radius: 50%;">
+    </div>
+
+  </header>
+  <nav class="navbar" id="navbar">
+    <ul class="navbar-nav">
+      <li class="bars icon-li">
+        <div class="div-icon">
+          <i class="fas fa-bars icon" id="bars"></i>
+        </div>
+      </li>
+      <a href="feed.html" style="text-decoration: none;" class="select">
+        <li class="homebutton icon-li">
+          <i class="fas fa-home icon"></i>
+          <span style="white-space: nowrap;" class="link-text">Feed</span>
+        </li>
+      </a>
+
+      <a href="posting-images.html" style="text-decoration: none;" class="select">
+        <li class="post-image icon-li">
+          <i class="fas fa-file-upload icon"></i>
+          <span style="white-space: nowrap;" class="link-text">New post</span>
+        </li>
+      </a>
+
+      <a href="profile.html" style="text-decoration: none;" class="select" id="profile-link">
+        <li class="profile icon-li">
+          <i class="fas fa-user-circle icon"></i>
+          <span style="white-space: nowrap;" class="link-text">Profile</span>
+        </li>
+      </a>
+      <a href="#" style="text-decoration: none;" class="select signoutdiv" id="signOutBtn">
+
+        <li class="signout icon-li">
+          <i class="fas fa-sign-out-alt icon"></i>
+          <span style="white-space: nowrap;" class="link-text">Sign Out</span>
+        </li>
+      </a>
+
+    </ul>
+  </nav>
+  <main>
+    <div class="detailsandnewpost">
+      <div id="userDetails"></div>
+      <div class="outnewpost">
+          <a href="posting-images.html" class="link newpost">
+            <i class="fas fa-file-upload icon-upload"></i>
+            <div class="newposttext" style="float: left;">New post</div>
+        </a>
+      </div>
+    </div>
+    <div id="posts"></div>
+
+
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/8.9.0/firebase-auth.js"></script>
+  <script src="/__/firebase/8.9.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/8.9.1/firebase-storage.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyApgL_EclwGQZp_-yskoctv5ZTN7V3Qwxs",
+      authDomain: "cmtest-c990f.firebaseapp.com",
+      projectId: "cmtest-c990f",
+      storageBucket: "cmtest-c990f.appspot.com",
+      messagingSenderId: "142906925889",
+      appId: "1:142906925889:web:ab57b41a91e11c96bdf7c0",
+      measurementId: "G-EBL95TBJT3"
+    }
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="feed.js"></script>
+</body>
+
+</html>

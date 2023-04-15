@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>reMake login</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/efca1a24b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>reMake</h1>
+    <div class="userpfp">
+      <img id="profilepicture" src="" style="border-radius: 50%;">
+    </div>
+  </header>
+
+  <main>
+    <section id="alert" class="alert" hidden="true">
+      You have successfully signed in with Google!   <a href="feed.html">Click here to go to the feed</a>
+    </section>
+
+
+    <div id="whenSignedOut" >
+      <div class="intro">Welcome to reMake.</div>
+      <div class="iintro">The perfect place to ask questions, environmentally related</div>
+      <button id="signInBtn">Sign in with google</button>
+    </div>
+
+    <section id="signedin" hidden="true">
+      <label style="color: white; padding-top: 4rem;" id="labelusername" for="username">Name</label><br>
+      <textarea id="username" maxlength="30" placeholder="set a name for yourself... (max 30 characters)"
+      cols="100" rows="1" style="resize: none;"></textarea>
+      <br>
+      <label style="color: white" id="labeldescription" for="userdescription">Description</label><br>
+      <textarea id="userdescription" maxlength="200" placeholder="set a description for yourself... (as long as you want)"
+      cols="100" rows="3" style="resize: none;"></textarea>
+      <br>
+      <button id="submit">Submit!</button>
+    </section>
+
+    <section id="whenSignedIn" hidden="true">
+      <div id="userDetails"></div>
+      <button id="signOutBtn">Sign out</button>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/8.9.0/firebase-auth.js"></script>
+  <script src="/__/firebase/8.9.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/8.9.1/firebase-storage.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyApgL_EclwGQZp_-yskoctv5ZTN7V3Qwxs",
+      authDomain: "cmtest-c990f.firebaseapp.com",
+      projectId: "cmtest-c990f",
+      storageBucket: "cmtest-c990f.appspot.com",
+      messagingSenderId: "142906925889",
+      appId: "1:142906925889:web:ab57b41a91e11c96bdf7c0",
+      measurementId: "G-EBL95TBJT3"
+    }
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>

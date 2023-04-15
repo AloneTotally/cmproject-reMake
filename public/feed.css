@@ -1,0 +1,265 @@
+:root {
+  --black: #000000;
+  --green: #4eff9f;
+  --grey: #a7a7a7;
+  --lighter-black: #2f2f2f;
+  background-color: var(--lighter-black);
+  font-size: 20px;
+  font-family: Poppins;
+}
+body::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #a7a7a7;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4eff9f;
+  border-radius: 100px;
+}
+
+div {
+  color: #ffffff;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black);
+  color: #ffffff;
+  justify-items: center;
+  margin: 0em 0em 2em 0em;
+  padding: 0em 0em 0em 1em;
+}
+
+main {
+  margin-top: 8rem;
+  margin-left: 8rem;
+}
+
+.navbar {
+  width: 5.4rem;
+  height: 100%;
+  position: fixed;
+  background-color: #000000;
+  left: 0;
+  transition: width 400ms ease;
+}
+.link-text {
+  padding: 2.1rem 0;
+  display: none;
+  margin-left: 1rem;
+  font-size: 0.75rem;
+  color: #ffffff;
+  transition: 400ms;
+}
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+.icon-li {
+  display: flex;
+  text-align: center;
+}
+.icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding-bottom: 2.1rem;
+  padding-top: 2.1rem;
+  width: 5.4rem;
+  transition: 400ms;
+}
+.navbar:hover {
+  width: 14rem;
+}
+.select {
+  color: #ffffff;
+  transition: 400ms;
+}
+.navbar:hover .link-text {
+  display: block;
+}
+.select:hover .icon {
+  color: #4eff9f;
+}
+.select:hover .link-text {
+  color: #4eff9f;
+  display: block;
+}
+.select:hover {
+  background-color: #1f1f1f;
+}
+.signoutdiv {
+  background-color: #000000;
+  border: none;
+}
+.detailsandnewpost {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.newposttext {
+  color: #4eff9f;
+}
+.newpost {
+  background-color: #2f2f2f;
+  color: #4eff9f;
+  border: 2px solid #4eff9f;
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  transition: 400ms;
+}
+.newpost:hover {
+  background-color: #4eff9f;
+  color: #000000;
+  border: none;
+}
+.newpost:hover .newposttext {
+  color: #000000;
+}
+.outnewpost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+}
+.link {
+  text-decoration: none;
+}
+
+.icon-upload {
+  padding-left: 1rem;
+}
+.userpfp {
+  margin: 1em 2em 0.5em 0.5em;
+  text-align: center;
+}
+
+#newdiv {
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: #1f1f1f;
+  margin-bottom: 1rem;
+}
+#profilepicture {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  float: left;
+  margin: 0 1rem 0 0;
+}
+#pfp {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  float: left;
+  margin: 0 1rem 0 0;
+}
+#header {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+#date {
+  font-size: 0.65rem;
+  color: #a7a7a7;
+}
+#answers {
+  border-radius: 3px;
+  border: thin solid #4eff9f;
+  color: #4eff9f;
+  font-size: 0.6rem;
+  padding: 0rem 0.2rem 0 0.2rem;
+  margin: 0 0 0 1rem;
+}
+#questioner {
+  font-size: 0.7rem;
+  margin-right: 0.5rem;
+}
+#on-left {
+  display: flex;
+  margin-right: 3rem;
+}
+#user {
+  font-size: 0.7rem;
+  color: #4eff9f;
+  text-decoration: none;
+}
+@media only screen and (max-width: 640px) {
+  :root {
+    font-size: 16px;
+  }
+  #bars {
+    display: none;
+  }
+  .navbar {
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+  }
+
+  .navbar:hover {
+    height: 5rem;
+    width: 100%;
+  }
+  .link-text {
+    display: block;
+    font-size: 0.5em;
+    margin: 0;
+    padding: 0;
+  }
+  .select:hover .link-text {
+    color: #4eff9f;
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .icon-li {
+    flex-direction: column;
+  }
+  .icon {
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  main {
+    margin-top: 9em;
+    margin-left: 0;
+    margin-bottom: 10em;
+  }
+}
+
+@media (max-width: 910px) {
+  #newdiv {
+    border-radius: 30px;
+    padding: 1rem;
+    background-color: #1f1f1f;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 14px;
+  }
+}
