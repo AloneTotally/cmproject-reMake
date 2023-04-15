@@ -10,14 +10,11 @@ This is a project that is like a forum, which is focused on questions that are e
 
   - The upvoting of answers
 
--
-
-### Settings
-
 - Changing of account name
 - Changing of account description
-
-This project is already published online, at cmtest-c990f.web.app
+  > 📘
+  >
+  > This project is already published online, at [cmtest-c990f.web.app]
 
 ## What was used
 
